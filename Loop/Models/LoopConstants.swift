@@ -42,7 +42,7 @@ enum LoopConstants {
         HKQuantity(unit: .milligramsPerDeciliter, doubleValue: 60)...HKQuantity(unit: .milligramsPerDeciliter, doubleValue: 200)
 
     static let glucoseChartDefaultDisplayBoundClamped =
-        HKQuantity(unit: .milligramsPerDeciliter, doubleValue: 80)...HKQuantity(unit: .milligramsPerDeciliter, doubleValue: 240)
+        HKQuantity(unit: .milligramsPerDeciliter, doubleValue: 40)...HKQuantity(unit: .milligramsPerDeciliter, doubleValue: 280)
     
     
     // Compile time configuration
