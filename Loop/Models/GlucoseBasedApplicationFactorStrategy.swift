@@ -12,13 +12,12 @@ import LoopKit
 import LoopCore
 
 struct GlucoseBasedApplicationFactorStrategy: ApplicationFactorStrategy {
-    // Make the strategy more aggressive by increasing the min and max application factors
-    static let minPartialApplicationFactor = 0.50 // increased from 0.20
-    static let maxPartialApplicationFactor = 1.25 // increased from 0.80
-
-    // Optionally reduce the sliding scale range to apply more correction sooner
-    static let minGlucoseDeltaSlidingScale = 5.0  // reduced from 10.0 to make response more aggressive
-    static let maxGlucoseSlidingScale = 160.0     // reduced from 200.0
+    static let minPartialApplicationFactor = 0.50 // min fraction of correction when glucose > minGlucoseSlidingScale
+    static let maxPartialApplicationFactor = 1.25// max fraction of correction when glucose > maxGlucoseSlidingScale
+    // set minGlucoseSlidingScale based on user setting for correction range
+    // use mg/dL for calculations
+    static let minGlucoseDeltaSlidingScale = 5.0 // mg/dL
+    static let maxGlucoseSlidingScale = 200.0 // mg/dL
 
     func calculateDosingFactor(
         for glucose: HKQuantity,
@@ -32,12 +31,6 @@ struct GlucoseBasedApplicationFactorStrategy: ApplicationFactorStrategy {
 
         // Calculate minimum glucose sliding scale and scaling fraction
         let minGlucoseSlidingScale = GlucoseBasedApplicationFactorStrategy.minGlucoseDeltaSlidingScale + lowerBoundTarget
-
-        // Protect against divide-by-zero or negative range
-        guard GlucoseBasedApplicationFactorStrategy.maxGlucoseSlidingScale > minGlucoseSlidingScale else {
-        return GlucoseBasedApplicationFactorStrategy.maxPartialApplicationFactor
-        }
-
         let scalingFraction = (GlucoseBasedApplicationFactorStrategy.maxPartialApplicationFactor - GlucoseBasedApplicationFactorStrategy.minPartialApplicationFactor) / (GlucoseBasedApplicationFactorStrategy.maxGlucoseSlidingScale - minGlucoseSlidingScale)
         let scalingGlucose = max(currentGlucose - minGlucoseSlidingScale, 0.0)
 
