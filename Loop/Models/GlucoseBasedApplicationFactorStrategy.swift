@@ -35,7 +35,7 @@ struct GlucoseBasedApplicationFactorStrategy: ApplicationFactorStrategy {
 
         // Protect against divide-by-zero or negative range
         guard GlucoseBasedApplicationFactorStrategy.maxGlucoseSlidingScale > minGlucoseSlidingScale else {
-            return GlucoseBasedApplicationFactorStrategy.maxPartialApplicationFactor
+        return GlucoseBasedApplicationFactorStrategy.maxPartialApplicationFactor
         }
 
         let scalingFraction = (GlucoseBasedApplicationFactorStrategy.maxPartialApplicationFactor - GlucoseBasedApplicationFactorStrategy.minPartialApplicationFactor) / (GlucoseBasedApplicationFactorStrategy.maxGlucoseSlidingScale - minGlucoseSlidingScale)
@@ -45,8 +45,5 @@ struct GlucoseBasedApplicationFactorStrategy: ApplicationFactorStrategy {
         let effectiveBolusApplicationFactor = min(GlucoseBasedApplicationFactorStrategy.minPartialApplicationFactor + scalingGlucose * scalingFraction, GlucoseBasedApplicationFactorStrategy.maxPartialApplicationFactor)
 
         return effectiveBolusApplicationFactor
-    }
-}
-
     }
 }
