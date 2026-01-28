@@ -93,6 +93,12 @@
             "state" : "translated",
             "value" : "? gr"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "? g"
+          }
         }
       }
     },
@@ -187,6 +193,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "? Ü"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "? U"
           }
         }
       }
@@ -378,6 +390,12 @@
             "state" : "translated",
             "value" : "%1$@ Ü"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ U"
+          }
         }
       }
     },
@@ -497,6 +515,12 @@
             "state" : "translated",
             "value" : "%1$@ v%2$@"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ v%2$@"
+          }
         }
       }
     },
@@ -536,7 +560,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Glucides actifs"
+            "value" : "Glucides"
           }
         },
         "he" : {
@@ -620,7 +644,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "活性碳水化合物"
+            "value" : "活性碳水"
           }
         }
       }
@@ -661,7 +685,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Insuline active"
+            "value" : "Insuline"
           }
         },
         "he" : {
@@ -740,6 +764,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lượng Insulin còn hoạt động"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "活性胰岛素"
           }
         }
       }
@@ -954,7 +984,7 @@
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Eventually %1$@"
+            "value" : "În cele din urmă %1$@"
           }
         },
         "ru" : {
@@ -1105,6 +1135,12 @@
             "state" : "translated",
             "value" : "g"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "克"
+          }
         }
       }
     },
@@ -1235,7 +1271,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "IOB %1$@ 单位"
+            "value" : "活性胰岛素 %1$@ U"
           }
         }
       }
@@ -1356,6 +1392,12 @@
             "state" : "translated",
             "value" : "mg/dL"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "mg/dL"
+          }
         }
       }
     },
@@ -1471,6 +1513,12 @@
           }
         },
         "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "mmol/L"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "mmol/L"
